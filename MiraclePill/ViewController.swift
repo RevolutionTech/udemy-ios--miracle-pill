@@ -10,12 +10,24 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var cityTextField: UITextField!
+
+    @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var statePickerBtn: UIButton!
+
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var zipCodeLabel: UILabel!
     @IBOutlet weak var zipCodeTextField: UITextField!
+
+    @IBOutlet weak var buyNowBtn: UIButton!
+    @IBOutlet weak var successImg: UIImageView!
 
     let states = ["Alaska", "Arkansas", "Albama", "Arizona", "California", "Maine", "New York"]
 
@@ -59,4 +71,20 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         zipCodeTextField.isHidden = false
     }
 
+    @IBAction func buyNowBtnPressed(_ sender: Any) {
+        nameLabel.isHidden = true
+        nameTextField.isHidden = true
+        addressLabel.isHidden = true
+        addressTextField.isHidden = true
+        cityLabel.isHidden = true
+        cityTextField.isHidden = true
+        stateLabel.isHidden = true
+        statePickerBtn.isHidden = true
+        countryLabel.isHidden = true
+        countryTextField.isHidden = true
+        zipCodeLabel.isHidden = true
+        zipCodeTextField.isHidden = true
+        buyNowBtn.isHidden = true
+        successImg.isHidden = false
+    }
 }
